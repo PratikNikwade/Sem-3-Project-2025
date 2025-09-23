@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathfinder - Course Recommendation System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <i class="fas fa-route"></i>
+                    <h1>Pathfinder</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#quiz">Take Quiz</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <div id="authButtons">
+                        <button class="btn btn-outline" id="loginBtn">Login</button>
+                        <button class="btn btn-primary" id="signupBtn">Sign Up</button>
+                    </div>
+                </div>
+                <div class="user-profile" id="userProfile" style="display: none;">
+                    <div class="user-avatar" id="userAvatar">U</div>
+                    <span id="username">User</span>
+                    <button class="btn btn-outline" id="logoutBtn">Logout</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Page -->
+    <section id="home" class="active-page">
+        <div class="hero">
+            <div class="container">
+                <h2>Find Your Perfect Learning Path</h2>
+                <p>Pathfinder helps you discover courses tailored to your interests, skills, and career goals through our personalized recommendation system.</p>
+                <button class="btn btn-primary" id="startQuizBtn">Start Course Quiz</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Popular Courses</h2>
+                    <p>Discover courses that other students are finding valuable for their career growth</p>
+                </div>
+                <div class="courses">
+                    <div class="course-card">
+                        <div class="course-img">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="course-content">
+                            <h3 class="course-title">Web Development Fundamentals</h3>
+                            <p class="course-description">Learn HTML, CSS, and JavaScript to build responsive websites from scratch.</p>
+                            <div class="course-meta">
+                                <span><i class="far fa-clock"></i> 8 weeks</span>
+                                <span><i class="fas fa-user-graduate"></i> Beginner</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-img">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="course-content">
+                            <h3 class="course-title">Data Science Essentials</h3>
+                            <p class="course-description">Master data analysis, visualization, and basic machine learning concepts.</p>
+                            <div class="course-meta">
+                                <span><i class="far fa-clock"></i> 10 weeks</span>
+                                <span><i class="fas fa-user-graduate"></i> Intermediate</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-img">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <div class="course-content">
+                            <h3 class="course-title">UI/UX Design Principles</h3>
+                            <p class="course-description">Create intuitive and beautiful user interfaces with proven design methodologies.</p>
+                            <div class="course-meta">
+                                <span><i class="far fa-clock"></i> 6 weeks</span>
+                                <span><i class="fas fa-user-graduate"></i> Beginner</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="section" style="display: none;">
+        <div class="container">
+            <div class="section-title">
+                <h2>How Pathfinder Works</h2>
+                <p>Our smart recommendation system matches you with the perfect courses in just a few steps</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3>Create Your Profile</h3>
+                    <p>Sign up and tell us about your academic background and interests.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3>Take the Assessment</h3>
+                    <p>Complete our short quiz to help us understand your learning preferences.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Get Recommendations</h3>
+                    <p>Receive personalized course suggestions based on your unique profile.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="section" style="display: none;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Course Recommendation Quiz</h2>
+                <p>Answer a few questions to help us understand your learning preferences and goals</p>
+            </div>
+            <div class="quiz-container">
+                <div class="quiz-progress">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+                <div id="quizContent">
+                    <!-- Quiz questions will be inserted here dynamically -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommended Courses Section -->
+    <section id="recommended-courses" class="section" style="display: none;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Your Recommended Courses</h2>
+                <p>Based on your quiz responses, we think these courses would be a great fit for you</p>
+            </div>
+            <div class="courses" id="recommendedCoursesList">
+                <!-- Recommended courses will be inserted here dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Page -->
+    <section id="loginPage" class="auth-page">
+        <div class="section">
+            <div class="container">
+                <div class="form-container">
+                    <h2 class="section-title">Login to Your Account</h2>
+                    <div class="form-group">
+                        <label for="loginEmail">Email</label>
+                        <input type="email" id="loginEmail" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" placeholder="Enter your password">
+                    </div>
+                    <button class="btn btn-primary" id="loginSubmit">Login</button>
+                    <p style="margin-top: 1rem; text-align: center;">
+                        Don't have an account? <a href="#" id="goToSignup">Sign up here</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signup Page -->
+    <section id="signupPage" class="auth-page">
+        <div class="section">
+            <div class="container">
+                <div class="form-container">
+                    <h2 class="section-title">Create an Account</h2>
+                    <div class="form-group">
+                        <label for="signupName">Full Name</label>
+                        <input type="text" id="signupName" placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="signupEmail">Email</label>
+                        <input type="email" id="signupEmail" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="signupPassword">Password</label>
+                        <input type="password" id="signupPassword" placeholder="Create a password">
+                    </div>
+                    <button class="btn btn-primary" id="signupSubmit">Sign Up</button>
+                    <p style="margin-top: 1rem; text-align: center;">
+                        Already have an account? <a href="#" id="goToLogin">Login here</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Pathfinder</h3>
+                    <p>Your personalized course recommendation system to find the perfect learning path.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#quiz">Take Quiz</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> chaudharipranav057@gmail.com
+                        <br>nikwadepratik@gmail.com</li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; Devansh chaudhari<br>Pranav Chaudhari<br>Nikwade Pratik<br>Rishab Swami</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
