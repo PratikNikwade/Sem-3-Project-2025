@@ -129,12 +129,12 @@ function toggleTheme() {
     if (state.currentTheme === 'light') {
         document.documentElement.setAttribute('data-theme', 'dark');
         state.currentTheme = 'dark';
-        elements.themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        if (elements.themeToggle) elements.themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
         localStorage.setItem('theme', 'dark');
     } else {
         document.documentElement.removeAttribute('data-theme');
         state.currentTheme = 'light';
-        elements.themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        if (elements.themeToggle) elements.themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
         localStorage.setItem('theme', 'light');
     }
 }
@@ -144,11 +144,11 @@ function loadTheme() {
     if (savedTheme === 'dark') {
         document.documentElement.setAttribute('data-theme', 'dark');
         state.currentTheme = 'dark';
-        elements.themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        if (elements.themeToggle) elements.themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
     } else {
         document.documentElement.removeAttribute('data-theme');
         state.currentTheme = 'light';
-        elements.themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        if (elements.themeToggle) elements.themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
     }
 }
 
@@ -367,58 +367,75 @@ document.addEventListener('DOMContentLoaded', function() {
     loadTheme();
     
     // Theme toggle
-    elements.themeToggle.addEventListener('click', toggleTheme);
-    
+    if (elements.themeToggle) elements.themeToggle.addEventListener('click', toggleTheme);
+
     // Navigation
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            navigateTo(targetId);
+    const navLinks = document.querySelectorAll('.nav-links a');
+    if (navLinks && navLinks.length) {
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                navigateTo(targetId);
+            });
         });
-    });
-    
+    }
+
     // Authentication
-    elements.loginBtn.addEventListener('click', function() {
-        showPage('loginPage');
-    });
-    
-    elements.signupBtn.addEventListener('click', function() {
-        showPage('signupPage');
-    });
-    
-    elements.logoutBtn.addEventListener('click', logoutUser);
-    
-    elements.startQuizBtn.addEventListener('click', function() {
-        if (!state.currentUser) {
+    if (elements.loginBtn) {
+        elements.loginBtn.addEventListener('click', function() {
             showPage('loginPage');
-            alert('Please login first to take the quiz');
-            return;
-        }
-        startQuiz();
-        showPage('quiz');
-    });
-    
-    elements.goToLogin.addEventListener('click', function(e) {
-        e.preventDefault();
-        showPage('loginPage');
-    });
-    
-    elements.goToSignup.addEventListener('click', function(e) {
-        e.preventDefault();
-        showPage('signupPage');
-    });
-    
-    elements.loginSubmit.addEventListener('click', function() {
-        const email = document.getElementById('loginEmail').value;
-        const password = document.getElementById('loginPassword').value;
-        loginUser(email, password);
-    });
-    
-    elements.signupSubmit.addEventListener('click', function() {
-        const name = document.getElementById('signupName').value;
-        const email = document.getElementById('signupEmail').value;
-        const password = document.getElementById('signupPassword').value;
-        signupUser(name, email, password);
-    });
+        });
+    }
+
+    if (elements.signupBtn) {
+        elements.signupBtn.addEventListener('click', function() {
+            showPage('signupPage');
+        });
+    }
+
+    if (elements.logoutBtn) elements.logoutBtn.addEventListener('click', logoutUser);
+
+    if (elements.startQuizBtn) {
+        elements.startQuizBtn.addEventListener('click', function() {
+            if (!state.currentUser) {
+                showPage('loginPage');
+                alert('Please login first to take the quiz');
+                return;
+            }
+            startQuiz();
+            showPage('quiz');
+        });
+    }
+
+    if (elements.goToLogin) {
+        elements.goToLogin.addEventListener('click', function(e) {
+            e.preventDefault();
+            showPage('loginPage');
+        });
+    }
+
+    if (elements.goToSignup) {
+        elements.goToSignup.addEventListener('click', function(e) {
+            e.preventDefault();
+            showPage('signupPage');
+        });
+    }
+
+    if (elements.loginSubmit) {
+        elements.loginSubmit.addEventListener('click', function() {
+            const email = document.getElementById('loginEmail') ? document.getElementById('loginEmail').value : '';
+            const password = document.getElementById('loginPassword') ? document.getElementById('loginPassword').value : '';
+            loginUser(email, password);
+        });
+    }
+
+    if (elements.signupSubmit) {
+        elements.signupSubmit.addEventListener('click', function() {
+            const name = document.getElementById('signupName') ? document.getElementById('signupName').value : '';
+            const email = document.getElementById('signupEmail') ? document.getElementById('signupEmail').value : '';
+            const password = document.getElementById('signupPassword') ? document.getElementById('signupPassword').value : '';
+            signupUser(name, email, password);
+        });
+    }
 });
