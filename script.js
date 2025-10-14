@@ -33,7 +33,14 @@ const state = {
             duration: "8 weeks",
             level: "Beginner",
             field: "Technology",
-            tags: ["programming", "frontend", "web"]
+            tags: ["programming", "frontend", "web"],
+            jobs: ["Frontend Developer", "Web Designer", "UI Engineer"],
+            cheatsheet: "https://web.dev/learn/css/",
+            youtube: [
+                "https://www.youtube.com/watch?v=UB1O30fR-EE",
+                "https://www.youtube.com/watch?v=PkZNo7MFNFg"
+            ],
+            roadmap: "https://roadmap.sh/frontend"
         },
         {
             id: 2,
@@ -42,7 +49,14 @@ const state = {
             duration: "10 weeks",
             level: "Intermediate",
             field: "Technology",
-            tags: ["data", "analysis", "python", "statistics"]
+            tags: ["data", "analysis", "python", "statistics"],
+            jobs: ["Data Analyst", "Machine Learning Engineer", "Business Intelligence Analyst"],
+            cheatsheet: "https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf",
+            youtube: [
+                "https://www.youtube.com/watch?v=ua-CiDNNj30",
+                "https://www.youtube.com/watch?v=r-uOLxNrNk8"
+            ],
+            roadmap: "https://roadmap.sh/data-science"
         },
         {
             id: 3,
@@ -51,7 +65,14 @@ const state = {
             duration: "6 weeks",
             level: "Beginner",
             field: "Design",
-            tags: ["design", "interface", "user experience"]
+            tags: ["design", "interface", "user experience"],
+            jobs: ["UI Designer", "UX Researcher", "Product Designer"],
+            cheatsheet: "https://www.smashingmagazine.com/2018/01/ux-cheat-sheet/",
+            youtube: [
+                "https://www.youtube.com/watch?v=Ovj4hFxko7c",
+                "https://www.youtube.com/watch?v=3jZlI1b80L4"
+            ],
+            roadmap: "https://roadmap.sh/ui-ux"
         },
         {
             id: 4,
@@ -60,7 +81,14 @@ const state = {
             duration: "8 weeks",
             level: "Intermediate",
             field: "Business",
-            tags: ["marketing", "business", "social media"]
+            tags: ["marketing", "business", "social media"],
+            jobs: ["Digital Marketer", "SEO Specialist", "Content Strategist"],
+            cheatsheet: "https://backlinko.com/digital-marketing-cheat-sheet",
+            youtube: [
+                "https://www.youtube.com/watch?v=nCgQDjiotG0",
+                "https://www.youtube.com/watch?v=V0vQnQSrC-g"
+            ],
+            roadmap: "https://roadmap.sh/marketing"
         },
         {
             id: 5,
@@ -69,7 +97,14 @@ const state = {
             duration: "12 weeks",
             level: "Beginner",
             field: "Science",
-            tags: ["psychology", "science", "behavior"]
+            tags: ["psychology", "science", "behavior"],
+            jobs: ["Psychologist", "Counselor", "Research Assistant"],
+            cheatsheet: "https://www.psychologytoday.com/us/basics/psychology",
+            youtube: [
+                "https://www.youtube.com/watch?v=vo4pMVb0R6M",
+                "https://www.youtube.com/watch?v=Q3pzbFjYy5w"
+            ],
+            roadmap: "https://www.coursera.org/articles/psychology-careers"
         },
         {
             id: 6,
@@ -78,7 +113,14 @@ const state = {
             duration: "10 weeks",
             level: "Intermediate",
             field: "Business",
-            tags: ["finance", "accounting", "business"]
+            tags: ["finance", "accounting", "business"],
+            jobs: ["Accountant", "Financial Analyst", "Auditor"],
+            cheatsheet: "https://www.accountingcoach.com/cheat-sheet",
+            youtube: [
+                "https://www.youtube.com/watch?v=7gkF6QpQ6uA",
+                "https://www.youtube.com/watch?v=1I3hMwQU6GU"
+            ],
+            roadmap: "https://corporatefinanceinstitute.com/resources/accounting/accounting-career-paths/"
         },
         {
             id: 7,
@@ -87,7 +129,14 @@ const state = {
             duration: "6 weeks",
             level: "Beginner",
             field: "Design",
-            tags: ["design", "graphic", "visual arts"]
+            tags: ["design", "graphic", "visual arts"],
+            jobs: ["Graphic Designer", "Brand Designer", "Illustrator"],
+            cheatsheet: "https://www.canva.com/learn/graphic-design-cheat-sheet/",
+            youtube: [
+                "https://www.youtube.com/watch?v=piQKrwS6Yms",
+                "https://www.youtube.com/watch?v=QH2T6YkQb6A"
+            ],
+            roadmap: "https://www.careerexplorer.com/careers/graphic-designer/"
         },
         {
             id: 8,
@@ -96,7 +145,14 @@ const state = {
             duration: "12 weeks",
             level: "Advanced",
             field: "Technology",
-            tags: ["programming", "AI", "data science"]
+            tags: ["programming", "AI", "data science"],
+            jobs: ["Machine Learning Engineer", "AI Developer", "Data Scientist"],
+            cheatsheet: "https://stanford.edu/~shervine/teaching/cs-229/cheatsheet-supervised-learning",
+            youtube: [
+                "https://www.youtube.com/watch?v=Gv9_4yMHFhI",
+                "https://www.youtube.com/watch?v=ukzFI9rgwfU"
+            ],
+            roadmap: "https://roadmap.sh/ai"
         }
     ],
     userAnswers: []
@@ -129,12 +185,12 @@ function toggleTheme() {
     if (state.currentTheme === 'light') {
         document.documentElement.setAttribute('data-theme', 'dark');
         state.currentTheme = 'dark';
-        if (elements.themeToggle) elements.themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        elements.themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
         localStorage.setItem('theme', 'dark');
     } else {
         document.documentElement.removeAttribute('data-theme');
         state.currentTheme = 'light';
-        if (elements.themeToggle) elements.themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        elements.themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
         localStorage.setItem('theme', 'light');
     }
 }
@@ -144,11 +200,11 @@ function loadTheme() {
     if (savedTheme === 'dark') {
         document.documentElement.setAttribute('data-theme', 'dark');
         state.currentTheme = 'dark';
-        if (elements.themeToggle) elements.themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        elements.themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
     } else {
         document.documentElement.removeAttribute('data-theme');
         state.currentTheme = 'light';
-        if (elements.themeToggle) elements.themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        elements.themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
     }
 }
 
@@ -307,15 +363,15 @@ function showQuizQuestion(index) {
 function showRecommendations() {
     // Calculate recommendations based on user answers
     const recommendations = calculateRecommendations();
-    
+
     // Show recommendations section
     showPage('recommended-courses');
-    
+
     // Display recommended courses
     let coursesHTML = '';
     recommendations.forEach(course => {
         coursesHTML += `
-            <div class="course-card">
+            <div class="course-card" data-course-id="${course.id}" style="cursor:pointer;">
                 <div class="course-img">
                     <i class="fas fa-graduation-cap"></i>
                 </div>
@@ -327,11 +383,39 @@ function showRecommendations() {
                         <span><i class="fas fa-user-graduate"></i> ${course.level}</span>
                     </div>
                 </div>
+                <div class="course-details" style="display:none;"></div>
             </div>
         `;
     });
-    
+
     elements.recommendedCoursesList.innerHTML = coursesHTML;
+
+    // Add click event to each card
+    document.querySelectorAll('.course-card').forEach(card => {
+        card.addEventListener('click', function() {
+            // Collapse any open details
+            document.querySelectorAll('.course-details').forEach(d => d.style.display = 'none');
+            // Expand this card's details
+            const courseId = parseInt(this.getAttribute('data-course-id'));
+            const course = state.courseDatabase.find(c => c.id === courseId);
+            const detailsDiv = this.querySelector('.course-details');
+            detailsDiv.innerHTML = `
+                <div class="related-section">
+                    <h4>Jobs</h4>
+                    <ul>${(course.jobs || []).map(j => `<li>${j}</li>`).join('')}</ul>
+                    <h4>Cheatsheet</h4>
+                    <a href="${course.cheatsheet}" target="_blank">${course.cheatsheet}</a>
+                    <h4>YouTube Videos</h4>
+                    <ul>
+                        ${(course.youtube || []).map(url => `<li><a href="${url}" target="_blank">${url}</a></li>`).join('')}
+                    </ul>
+                    <h4>Roadmap</h4>
+                    <a href="${course.roadmap}" target="_blank">${course.roadmap}</a>
+                </div>
+            `;
+            detailsDiv.style.display = 'block';
+        });
+    });
 }
 
 function calculateRecommendations() {
@@ -367,75 +451,60 @@ document.addEventListener('DOMContentLoaded', function() {
     loadTheme();
     
     // Theme toggle
-    if (elements.themeToggle) elements.themeToggle.addEventListener('click', toggleTheme);
-
+    elements.themeToggle.addEventListener('click', toggleTheme);
+    
     // Navigation
-    const navLinks = document.querySelectorAll('.nav-links a');
-    if (navLinks && navLinks.length) {
-        navLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                navigateTo(targetId);
-            });
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            navigateTo(targetId);
         });
-    }
-
+    });
+    
     // Authentication
-    if (elements.loginBtn) {
-        elements.loginBtn.addEventListener('click', function() {
+    elements.loginBtn.addEventListener('click', function() {
+        showPage('loginPage');
+    });
+    
+    elements.signupBtn.addEventListener('click', function() {
+        showPage('signupPage');
+    });
+    
+    elements.logoutBtn.addEventListener('click', logoutUser);
+    
+    elements.startQuizBtn.addEventListener('click', function() {
+        if (!state.currentUser) {
             showPage('loginPage');
-        });
-    }
-
-    if (elements.signupBtn) {
-        elements.signupBtn.addEventListener('click', function() {
-            showPage('signupPage');
-        });
-    }
-
-    if (elements.logoutBtn) elements.logoutBtn.addEventListener('click', logoutUser);
-
-    if (elements.startQuizBtn) {
-        elements.startQuizBtn.addEventListener('click', function() {
-            if (!state.currentUser) {
-                showPage('loginPage');
-                alert('Please login first to take the quiz');
-                return;
-            }
-            startQuiz();
-            showPage('quiz');
-        });
-    }
-
-    if (elements.goToLogin) {
-        elements.goToLogin.addEventListener('click', function(e) {
-            e.preventDefault();
-            showPage('loginPage');
-        });
-    }
-
-    if (elements.goToSignup) {
-        elements.goToSignup.addEventListener('click', function(e) {
-            e.preventDefault();
-            showPage('signupPage');
-        });
-    }
-
-    if (elements.loginSubmit) {
-        elements.loginSubmit.addEventListener('click', function() {
-            const email = document.getElementById('loginEmail') ? document.getElementById('loginEmail').value : '';
-            const password = document.getElementById('loginPassword') ? document.getElementById('loginPassword').value : '';
-            loginUser(email, password);
-        });
-    }
-
-    if (elements.signupSubmit) {
-        elements.signupSubmit.addEventListener('click', function() {
-            const name = document.getElementById('signupName') ? document.getElementById('signupName').value : '';
-            const email = document.getElementById('signupEmail') ? document.getElementById('signupEmail').value : '';
-            const password = document.getElementById('signupPassword') ? document.getElementById('signupPassword').value : '';
-            signupUser(name, email, password);
-        });
-    }
+            alert('Please login first to take the quiz');
+            return;
+        }
+        startQuiz();
+        showPage('quiz');
+    });
+    
+    elements.goToLogin.addEventListener('click', function(e) {
+        e.preventDefault();
+        showPage('loginPage');
+    });
+    
+    elements.goToSignup.addEventListener('click', function(e) {
+        e.preventDefault();
+        showPage('signupPage');
+    });
+    
+    elements.loginSubmit.addEventListener('click', function() {
+        const email = document.getElementById('loginEmail').value;
+        const password = document.getElementById('loginPassword').value;
+        loginUser(email, password);
+    });
+    
+    elements.signupSubmit.addEventListener('click', function() {
+        const name = document.getElementById('signupName').value;
+        const email = document.getElementById('signupEmail').value;
+        const password = document.getElementById('signupPassword').value;
+        signupUser(name, email, password);
+    });
 });
+
+const API_URL = 'http://localhost:3000';
