@@ -1,80 +1,40 @@
-# Sem-3-Project-2025
+# Project Logbook  Sem Project
+### **Project Title:** Pathfinder The Course Recommendation System 
 
-🧭 Pathfinder – Personalized Course Recommendation System
-📘 Overview
+| Sr.No |                           Contents                                    | Date        |
+|-------|-----------------------------------------------------------------------|-------------|
+| 1     | Project Group Formation.                                              | 19-07-2025  |
+| 2     | Project Topic Finalization.                                           | 16-08-2025  |
+| 3     | Guide suggested to focus on “Rental Room Finder for College Students” and start with Requirement Gathering, Existing System Study, and discuss project scope and feasibility. | 18-08-2025  |
+| 4     | System Designing – Prepared Data Flow Diagram and ER Diagram.         | 30-08-2025  |
+| 5     | Discussion on Software and Hardware Requirements with guide: Finalized tools, technologies, and platform to be used for the project. | 06-09-2025  |
+| 6     | Abstract – Short Summary/Overview of Project prepared.                | 10-09-2025  |
+| 7     | Home page design (Basic layout for room listing and search feature).  | 13-09-2025  |
+| 8     | Login page design (Owner, Student).                                   | 15-09-2025  |
+| 9     | Registration page design (Owner, Student).                            | 17-09-2025  |
+| 10    | Designing and Implementation Progress – 1 / Project Monitoring – 1.   | 20-09-2025  |
+| 11    | Implementation Progress-2                                             | 27-09-2025  |
+| 12    | Project Interaction - Demo with Guide (Database creation and backend) | 3-10-2025   |
+| 13    | Implementation Progress – 3 / Project Monitoring – 2.                 | 14-10-2025  |
 
-Pathfinder is a personalized course recommendation system designed to help students discover the most suitable learning paths based on their interests, skills, and career goals.
-The system analyzes user preferences and provides intelligent recommendations using a structured recommendation algorithm. It simplifies decision-making by aligning users’ goals with relevant courses, enhancing their learning journey.
+---
 
-🎯 Objectives
+**Project Description:**  
+The *Rental Room Finder for College Students* is a web-based platform designed to help students find affordable and verified rental rooms near their colleges. It enables owners to list rooms and students to search, filter, and book based on their preferences.  
 
-To recommend the best courses tailored to individual interests and academic backgrounds.
+**Technologies Used:**  
+- Frontend: HTML, CSS , JavaScript 
+- Backend: Python (Flask)  
+- Database: MySQL  
+- Version Control: Git & GitHub  
+- Tools: VS Code 
 
-To reduce confusion among students when choosing career-relevant courses.
+---
 
-To enhance learning outcomes through personalized suggestions.
-
-To bridge the gap between learners’ skills and available educational opportunities.
-
-⚙️ Key Features
-
-Personalized Recommendations: Suggests courses based on user profiles and preferences.
-
-Smart Filtering: Filters results by category, difficulty level, and career domain.
-
-User-Friendly Interface: Clean and minimal UI for easy navigation.
-
-Dynamic Search: Allows users to explore new or trending courses easily.
-
-Data-Driven Insights: Uses feedback to improve future recommendations.
-
-🧩 Modules
-
-User Registration & Login – Secure user authentication and profile creation.
-
-User Preference Input – Collects interests, goals, and skill levels.
-
-Recommendation Engine – Analyzes data and suggests best-fit courses.
-
-Course Database Management – Stores and updates course information.
-
-Feedback System – Users can rate and review recommendations for accuracy improvement.
-
-🖥️ Technology Stack
-
-Frontend: HTML, CSS, JavaScript
-
-Backend (optional): Python / Node.js (if applicable)
-
-Database: MySQL / Firebase (depending on implementation)
-
-Tools: Visual Studio Code, GitHub
-
-🚀 Future Enhancements
-
-Integration of AI/ML models for smarter recommendations.
-
-Adding career guidance and learning path tracking.
-
-Mobile-friendly interface for cross-platform use.
-
-Gamification features to increase engagement.
-
-👩‍💻 Team & Roles
-
-Team Name: Pathfinder Developers
-
-Roles:
-
-Frontend Developer – Designs UI/UX
-
-Backend Developer – Handles recommendation logic and data management
-
-Data Analyst – Works on recommendation accuracy
-
-Project Manager – Coordinates and oversees the workflow
-
-🏁 Conclusion
-
-Pathfinder makes the process of selecting the right course simple, smart, and personalized.
-It empowers students to make informed learning decisions and stay aligned with their goals — guiding them on their path to success
+**Team Members:**  
+- Member 1: Pranav Chaudhari
+- Member 2: Rishabh Swami
+- Member 3: Devansh Chaudhari
+- Member 4: Pratik Nikwade
+  
+**Guide:** Dr.M.N.Patil
