@@ -37,4 +37,4 @@ The *Rental Room Finder for College Students* is a web-based platform designed t
 - Member 3: Devansh Chaudhari
 - Member 4: Pratik Nikwade
   
-**Guide:** Dr.M.N.Patil
+**Guide:** Dr.M.S.Patil
