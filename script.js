@@ -39,12 +39,9 @@ const state = {
             field: "Technology",
             jobs: ["Frontend Developer", "Web Designer"],
             cheatsheet: "https://web.dev/learn/css/",
-            youtube: [
-                "https://www.youtube.com/watch?v=UB1O30fR-EE",
-                "https://www.youtube.com/watch?v=PkZNo7MFNFg"
-            ],
+            youtube: ["https://www.youtube.com/watch?v=UB1O30fR-EE"],
             roadmap: "https://roadmap.sh/frontend",
-            image: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=800"
+            image: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress"
         },
         {
             id: 2,
@@ -55,12 +52,9 @@ const state = {
             field: "Technology",
             jobs: ["Data Analyst", "ML Engineer"],
             cheatsheet: "https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf",
-            youtube: [
-                "https://www.youtube.com/watch?v=ua-CiDNNj30",
-                "https://www.youtube.com/watch?v=r-uOLxNrNk8"
-            ],
+            youtube: ["https://www.youtube.com/watch?v=ua-CiDNNj30"],
             roadmap: "https://roadmap.sh/data-science",
-            image: "https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=800"
+            image: "https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress"
         },
         {
             id: 3,
@@ -71,97 +65,22 @@ const state = {
             field: "Design",
             jobs: ["UI Designer", "Product Designer"],
             cheatsheet: "https://www.smashingmagazine.com/2018/01/ux-cheat-sheet/",
-            youtube: [
-                "https://www.youtube.com/watch?v=Ovj4hFxko7c",
-                "https://www.youtube.com/watch?v=3jZlI1b80L4"
-            ],
+            youtube: ["https://www.youtube.com/watch?v=Ovj4hFxko7c"],
             roadmap: "https://roadmap.sh/ui-ux",
-            image: "https://images.pexels.com/photos/196645/pexels-photo-196645.jpeg?auto=compress&cs=tinysrgb&w=800"
+            image: "https://images.pexels.com/photos/196645/pexels-photo-196645.jpeg?auto=compress"
         },
         {
             id: 4,
-            title: "Digital Marketing Strategy",
-            description: "Learn to create effective digital marketing campaigns across multiple platforms.",
-            duration: "8 weeks",
-            level: "Intermediate",
-            field: "Business",
-            tags: ["marketing", "business", "social media"],
-            jobs: ["Digital Marketer", "SEO Specialist", "Content Strategist"],
-            cheatsheet: "https://backlinko.com/digital-marketing-cheat-sheet",
-            youtube: [
-                "https://www.youtube.com/watch?v=nCgQDjiotG0",
-                "https://www.youtube.com/watch?v=V0vQnQSrC-g"
-            ],
-            roadmap: "https://roadmap.sh/marketing",
-            image: "https://images.pexels.com/photos/3182832/pexels-photo-3182832.jpeg?auto=compress&cs=tinysrgb&w=800"
-        },
-        {
-            id: 5,
-            title: "Introduction to Psychology",
-            description: "Explore the fundamental concepts and theories of human behavior and mental processes.",
-            duration: "12 weeks",
-            level: "Beginner",
-            field: "Science",
-            tags: ["psychology", "science", "behavior"],
-            jobs: ["Psychologist", "Counselor", "Research Assistant"],
-            cheatsheet: "https://www.psychologytoday.com/us/basics/psychology",
-            youtube: [
-                "https://www.youtube.com/watch?v=vo4pMVb0R6M",
-                "https://www.youtube.com/watch?v=Q3pzbFjYy5w"
-            ],
-            roadmap: "https://www.coursera.org/articles/psychology-careers",
-            image: "https://images.pexels.com/photos/3184643/pexels-photo-3184643.jpeg?auto=compress&cs=tinysrgb&w=800"
-        },
-        {
-            id: 6,
-            title: "Financial Accounting",
-            description: "Understand the principles of financial accounting and financial statement analysis.",
-            duration: "10 weeks",
-            level: "Intermediate",
-            field: "Business",
-            tags: ["finance", "accounting", "business"],
-            jobs: ["Accountant", "Financial Analyst", "Auditor"],
-            cheatsheet: "https://www.accountingcoach.com/cheat-sheet",
-            youtube: [
-                "https://www.youtube.com/watch?v=7gkF6QpQ6uA",
-                "https://www.youtube.com/watch?v=1I3hMwQU6GU"
-            ],
-            roadmap: "https://corporatefinanceinstitute.com/resources/accounting/accounting-career-paths/",
-            image: "https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=800"
-        },
-        {
-            id: 7,
-            title: "Graphic Design Fundamentals",
-            description: "Learn the principles of visual design, typography, and color theory.",
-            duration: "6 weeks",
-            level: "Beginner",
-            field: "Design",
-            tags: ["design", "graphic", "visual arts"],
-            jobs: ["Graphic Designer", "Brand Designer", "Illustrator"],
-            cheatsheet: "https://www.canva.com/learn/graphic-design-cheat-sheet/",
-            youtube: [
-                "https://www.youtube.com/watch?v=piQKrwS6Yms",
-                "https://www.youtube.com/watch?v=QH2T6YkQb6A"
-            ],
-            roadmap: "https://www.careerexplorer.com/careers/graphic-designer/",
-            image: "https://images.pexels.com/photos/620822/pexels-photo-620822.jpeg?auto=compress&cs=tinysrgb&w=800"
-        },
-        {
-            id: 8,
             title: "Machine Learning Basics",
             description: "Supervised and unsupervised ML fundamentals.",
             duration: "12 weeks",
             level: "Advanced",
             field: "Technology",
-            tags: ["programming", "AI", "data science"],
-            jobs: ["Machine Learning Engineer", "AI Developer", "Data Scientist"],
-            cheatsheet: "https://stanford.edu/~shervine/teaching/cs-229/cheatsheet-supervised-learning",
-            youtube: [
-                "https://www.youtube.com/watch?v=Gv9_4yMHFhI",
-                "https://www.youtube.com/watch?v=ukzFI9rgwfU"
-            ],
+            jobs: ["AI Engineer", "ML Engineer"],
+            cheatsheet: "https://stanford.edu/~shervine/teaching/cs-229/",
+            youtube: ["https://www.youtube.com/watch?v=Gv9_4yMHFhI"],
             roadmap: "https://roadmap.sh/ai",
-            image: "https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg?auto=compress&cs=tinysrgb&w=800"
+            image: "https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg?auto=compress"
         }
     ],
 
@@ -243,7 +162,7 @@ function navigateTo(id) {
 // ----------------------
 function loginUser(email, password) {
     if (!email || !password) {
-        alert('Please enter both email and password');
+        alert("Enter email & password");
         return;
     }
     
@@ -260,24 +179,41 @@ function loginUser(email, password) {
     showPage('home');
 }
 
+
 function signupUser(name, email, password) {
     if (!name || !email || !password) {
-        alert('Please fill all fields');
+        alert("Fill all fields");
         return;
     }
-    
-    state.currentUser = {
-        name: name,
-        email: email
-    };
-    
-    elements.userAvatar.textContent = state.currentUser.name.charAt(0).toUpperCase();
-    elements.username.textContent = state.currentUser.name;
-    document.getElementById('authButtons').style.display = 'none';
-    elements.userProfile.style.display = 'flex';
-    
-    showPage('home');
+
+    fetch("http://127.0.0.1:5000/api/auth/signup", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, password })
+    })
+    .then(res => res.json())
+    .then(data => {
+        console.log("Signup:", data);
+
+        // SAVE EMAIL FOR QUIZ & BOOKMARK
+        localStorage.setItem("userEmail", email);
+
+        state.currentUser = { name, email };
+
+        elements.authButtons.style.display = "none";
+        elements.userProfile.style.display = "flex";
+        elements.userAvatar.textContent = name[0].toUpperCase();
+        elements.username.textContent = name;
+
+        showPage("home");
+    })
+    .catch(err => {
+        console.error(err);
+        alert("Signup failed");
+    });
 }
+
+
 
 function logoutUser() {
     state.currentUser = null;
@@ -297,26 +233,24 @@ function startQuiz() {
 }
 
 function showQuizQuestion(index) {
-    if (index >= state.quizData.length) {
-        // Fill progress bar fully on finish
-        elements.progressBar.style.width = '100%';
-        showRecommendations();
-        return;
-    }
-    
-    const question = state.quizData[index];
-    const progress = (index / state.quizData.length) * 100;
-    elements.progressBar.style.width = `${progress}%`;
-    
-    let optionsHTML = '';
-    question.options.forEach((option, i) => {
-        optionsHTML += `
-            <div class="option" data-index="${i}">
-                ${option}
-            </div>
-        `;
-    });
-    
+   if (index >= state.quizData.length) {
+    elements.progressBar.style.width = "100%";
+
+    // ✅ SAVE QUIZ TO BACKEND
+    saveQuizAnswers(state.userAnswers);
+
+    showRecommendations();
+    return;
+}
+
+    const q = state.quizData[index];
+    const pct = (index / state.quizData.length) * 100;
+    elements.progressBar.style.width = pct + "%";
+
+    let options = q.options.map((o, i) =>
+        `<div class="option" data-index="${i}">${o}</div>`
+    ).join("");
+
     elements.quizContent.innerHTML = `
         <div class="question"><h3>${q.question}</h3>
             <div class="options">${options}</div>
@@ -326,23 +260,16 @@ function showQuizQuestion(index) {
             <button class="btn btn-primary" id="nextQuestion" disabled>Next</button>
         </div>
     `;
-    
-    // Add event listeners to options
-    document.querySelectorAll('.option').forEach(option => {
-        option.addEventListener('click', function() {
-            document.querySelectorAll('.option').forEach(opt => {
-                opt.classList.remove('selected');
-            });
-            
-            this.classList.add('selected');
-            document.getElementById('nextQuestion').disabled = false;
-            
-            const selectedIndex = parseInt(this.getAttribute('data-index'));
-            state.userAnswers[index] = question.options[selectedIndex];
+
+    document.querySelectorAll(".option").forEach(opt => {
+        opt.addEventListener("click", function () {
+            document.querySelectorAll(".option").forEach(o => o.classList.remove("selected"));
+            this.classList.add("selected");
+            state.userAnswers[index] = this.textContent;
+            document.getElementById("nextQuestion").disabled = false;
         });
     });
-    
-    // Navigation buttons
+
     if (index > 0) {
         document.getElementById("prevQuestion").addEventListener("click", () =>
             showQuizQuestion(index - 1)
@@ -382,16 +309,17 @@ function calculateRecommendations() {
 //   SHOW RECOMMENDED COURSES
 // ----------------------
 function showRecommendations() {
-    const recommendations = calculateRecommendations();
+    saveQuizAnswers(state.userAnswers);
+    const recommended = calculateRecommendations();
+    showPage("recommended-courses");
 
-    showPage('recommended-courses');
+    let html = "";
 
-    let coursesHTML = '';
-    recommendations.forEach(course => {
-        coursesHTML += `
-            <div class="course-card" data-course-id="${course.id}" style="cursor:pointer;">
+    recommended.forEach(c => {
+        html += `
+            <div class="course-card recommended-card" data-course-id="${c.id}">
                 <div class="course-img">
-                    <img src="${course.image}" alt="${course.title}">
+                    <img src="${c.image}" alt="${c.title}">
                 </div>
                 <div class="course-content">
                     <h3 class="course-title">${c.title}</h3>
@@ -412,32 +340,38 @@ function showRecommendations() {
         `;
     });
 
-    elements.recommendedCoursesList.innerHTML = coursesHTML;
+    elements.recommendedCoursesList.innerHTML = html;
 
-    // Click to show details
-    document.querySelectorAll('.course-card').forEach(card => {
-        card.addEventListener('click', function() {
-            // Collapse any open details
-            document.querySelectorAll('.course-details').forEach(d => d.style.display = 'none');
+    initRecommendedCourseClicks();
+    initBookmarkButtons();
+}
 
-            const courseId = parseInt(this.getAttribute('data-course-id'));
-            const course = state.courseDatabase.find(c => c.id === courseId);
-            const detailsDiv = this.querySelector('.course-details');
 
-            detailsDiv.innerHTML = `
+// ----------------------
+//   RECOMMENDED CARD CLICK EVENTS
+// ----------------------
+function initRecommendedCourseClicks() {
+    document.querySelectorAll(".recommended-card").forEach(card => {
+        card.addEventListener("click", function (e) {
+            if (e.target.closest(".bookmark-btn")) return;
+
+            const cid = parseInt(card.getAttribute("data-course-id"));
+            const course = state.courseDatabase.find(c => c.id === cid);
+
+            const details = card.querySelector(".course-details");
+
+            document.querySelectorAll(".course-details").forEach(d => d.style.display = "none");
+
+            details.innerHTML = `
                 <div class="related-section">
                     <h4>Jobs</h4>
-                    <ul>
-                        ${(course.jobs || []).map(j => `<li>${j}</li>`).join('')}
-                    </ul>
+                    <ul>${course.jobs.map(j => `<li>${j}</li>`).join("")}</ul>
 
                     <h4>Cheatsheet</h4>
                     <a href="${course.cheatsheet}" target="_blank">${course.cheatsheet}</a>
 
-                    <h4>YouTube Videos</h4>
-                    <ul>
-                        ${(course.youtube || []).map(url => `<li><a href="${url}" target="_blank">${url}</a></li>`).join('')}
-                    </ul>
+                    <h4>YouTube</h4>
+                    <ul>${course.youtube.map(u => `<li><a href="${u}" target="_blank">${u}</a></li>`).join("")}</ul>
 
                     <h4>Roadmap</h4>
                     <a href="${course.roadmap}" target="_blank">${course.roadmap}</a>
@@ -449,26 +383,6 @@ function showRecommendations() {
     });
 }
 
-function calculateRecommendations() {
-    const fieldInterest = state.userAnswers[0]; // Technology, Business, Design, etc.
-    const skillLevel = state.userAnswers[1]; // Beginner, Intermediate, etc.
-    
-    let filteredCourses = state.courseDatabase.filter(course => {
-        return course.field === fieldInterest && course.level === skillLevel;
-    });
-    
-    if (filteredCourses.length < 3) {
-        filteredCourses = state.courseDatabase.filter(course => {
-            return course.field === fieldInterest;
-        });
-    }
-    
-    if (filteredCourses.length < 3) {
-        filteredCourses = [...state.courseDatabase].sort(() => 0.5 - Math.random()).slice(0, 4);
-    }
-    
-    return filteredCourses.slice(0, 4);
-}
 
 // ----------------------
 //   GLOBAL EVENT LISTENERS
@@ -703,26 +617,78 @@ function injectHomeCourseBookmarkButtons() {
     });
 }
 
-    // Certification cards clickable & keyboard accessible
-    (function makeCertificationCardsClickable() {
-        document.querySelectorAll('.certification-card').forEach(card => {
-            const link = card.querySelector('a.btn[href], a[href].btn-primary, a[href*="http"]');
-            if (!link) return;
-            card.style.cursor = 'pointer';
-            card.setAttribute('tabindex', '0');
-            card.setAttribute('role', 'link');
 
-            card.addEventListener('click', (e) => {
-                const target = e.target;
-                if (target.closest('a')) return;
-                window.open(link.href, '_blank', 'noopener');
-            });
+// ---------------------------------------------
+// BOOKMARKS PAGE (SECTION) HANDLING
+// ---------------------------------------------
+function ensureBookmarksSectionExists() {
+    let section = document.getElementById("bookmarks");
+    if (!section) {
+        section = document.createElement("section");
+        section.id = "bookmarks";
+        section.className = "active-page section";
+        section.style.display = "none";
+        section.innerHTML = `
+            <div class="container">
+                <div class="section-title">
+                    <h2>Your Bookmarks</h2>
+                    <p>All the courses and certifications you've saved.</p>
+                </div>
+                <div id="bookmarksContent"></div>
+            </div>
+        `;
+        // Insert before footer
+        const footer = document.querySelector("footer");
+        document.body.insertBefore(section, footer);
+    }
+}
 
-            card.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    window.open(link.href, '_blank', 'noopener');
-                }
+function showBookmarks() {
+    ensureBookmarksSectionExists();
+    const section = document.getElementById("bookmarks");
+    const contentDiv = document.getElementById("bookmarksContent");
+    const bookmarks = getBookmarks();
+
+    if (!contentDiv) return;
+
+    if (bookmarks.length === 0) {
+        contentDiv.innerHTML = `
+            <p style="text-align:center; color: var(--text-light);">
+                No bookmarks yet. Go explore courses and certifications to save your favorites!
+            </p>
+        `;
+    } else {
+        let html = `<div class="courses">`;
+
+        bookmarks.forEach(item => {
+            html += `
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="${item.image}" alt="${item.title}">
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">${item.title}</h3>
+                        <p class="course-description">
+                            ${item.type === "course" ? "Saved Course" : "Saved Certification"}
+                        </p>
+                        <button class="btn btn-outline remove-bookmark-btn" data-id="${item.id}">
+                            <i class="fas fa-trash"></i> Remove
+                        </button>
+                    </div>
+                </div>
+            `;
+        });
+
+        html += `</div>`;
+        contentDiv.innerHTML = html;
+
+        // Hook remove buttons
+        document.querySelectorAll(".remove-bookmark-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const id = btn.dataset.id;
+                removeBookmark(id);
+                showBookmarks();
+                updateAllBookmarkButtons();
             });
         });
     }
@@ -754,6 +720,124 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+function renderDashboard() {
+    // Quiz answers
+    const interest = state.userAnswers[0] || "Not Taken";
+    const skill = state.userAnswers[1] || "Not Taken";
 
-// Currently unused, but kept if you plan backend integration
-const API_URL = 'http://localhost:3000';
+    // Count recommended courses
+    const recommendedCount = calculateRecommendations().length;
+
+    // Bookmarks
+    const bookmarks = getBookmarks();
+    const courseBookmarks = bookmarks.filter(b => b.type === "course").length;
+    const certBookmarks = bookmarks.filter(b => b.type === "cert").length;
+
+    // Clear old charts
+    document.querySelectorAll("canvas").forEach(c => {
+        const ctx = c.getContext("2d");
+        ctx && ctx.clearRect(0, 0, c.width, c.height);
+    });
+
+    // Interest Chart
+    new Chart(document.getElementById("interestChart"), {
+        type: "bar",
+        data: {
+            labels: [interest],
+            datasets: [{
+                label: "Interest Area",
+                data: [1],
+            }]
+        }
+    });
+
+    // Skill Chart
+    new Chart(document.getElementById("skillChart"), {
+        type: "pie",
+        data: {
+            labels: [skill],
+            datasets: [{
+                data: [1],
+            }]
+        }
+    });
+
+    // Course Recommendation Chart
+    new Chart(document.getElementById("courseChart"), {
+        type: "doughnut",
+        data: {
+            labels: ["Recommended"],
+            datasets: [{
+                data: [recommendedCount],
+            }]
+        }
+    });
+
+    // Bookmark Chart
+    new Chart(document.getElementById("bookmarkChart"), {
+        type: "bar",
+        data: {
+            labels: ["Courses", "Certifications"],
+            datasets: [{
+                label: "Bookmarks",
+                data: [courseBookmarks, certBookmarks],
+            }]
+        }
+    });
+}
+function navigateTo(id) {
+    showPage(id);
+    if (id === "dashboard") {
+        renderDashboard();
+    }
+}
+function saveQuizAnswers(quizAnswers) {
+  const email = localStorage.getItem("userEmail");
+
+  fetch("http://127.0.0.1:5000/api/quiz/save", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      email: email,
+      quizAnswers: quizAnswers
+    })
+  })
+  .then(res => res.json())
+  .then(data => console.log("Quiz saved:", data));
+}
+
+
+// Example quiz completion
+function onQuizComplete() {
+  const quizAnswers = [
+    "Technology",
+    "Beginner",
+    "5-10 hours"
+  ];
+
+  saveQuizAnswers(quizAnswers);
+}
+function saveBookmark(course) {
+  const email = localStorage.getItem("userEmail");
+
+  fetch("http://127.0.0.1:5000/api/bookmark/save", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      email: email,
+      course: course
+    })
+  })
+  .then(res => res.json())
+  .then(data => console.log("Bookmark saved:", data));
+}
+// Example bookmark button
+function onBookmarkClick() {
+  const course = {
+    title: "Web Development Fundamentals",
+    level: "Beginner",
+    duration: "8 weeks"
+  };
+
+  saveBookmark(course);
+}
