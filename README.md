@@ -26,7 +26,7 @@ The "Pathfinder" is a proposed personalized course recommendation system that us
 
 **Technologies Used:**  
 - Frontend: HTML, CSS , JavaScript 
-- Backend: 
+- Backend: Node JS , MongoDB
 - Version Control: Git & GitHub  
 - Tools: VS Code 
 
