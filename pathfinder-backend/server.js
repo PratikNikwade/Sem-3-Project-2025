@@ -11,7 +11,7 @@ app.use(express.json());
 
 console.log("Starting Pathfinder Backend...");
 
-// Routes (IMPORT ONCE)
+// Routes (IMPORT
 const authRoutes = require("./routes/auth");
 const quizRoutes = require("./routes/quiz");
 const bookmarkRoutes = require("./routes/bookmark");
