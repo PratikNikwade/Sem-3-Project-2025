@@ -33,9 +33,9 @@ The "Pathfinder" is a proposed personalized course recommendation system that us
 ---
 
 **Team Members:**  
-- Member 1: Pranav Chaudhari (Developer)
-- Member 2: Rishabh Swami (Frontend)
-- Member 3: Devansh Chaudhari (Documentation)
+- Member 1: Pranav Chaudhari (Developer and Database)
+- Member 2: Rishabh Swami (Frontend and Documentation)
+- Member 3: Devansh Chaudhari (Frontend And Documentation)
 - Member 4: Pratik Nikwade (GitHub and Logbook management)
   
 **Guide:** Dr.M.S.Patil
