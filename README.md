@@ -16,7 +16,8 @@
 | 12    | Project Interaction - Demo with Guide (Frontend) | 3-10-2025   |
 | 13    | Implementation Progress – 3 / Project Monitoring – 2.                 | 14-10-2025  |
 | 14    | Add a certificate button / (change in navbar)               | 11-11-2025  |
-| 15    | Final the Frontend                | 10-12-2025  |
+| 15    | Final Frontend                | 10-12-2025  |
+| 15    | Final Backend                | 20-12-2025  |
 
 ---
 
@@ -25,7 +26,7 @@ The "Pathfinder" is a proposed personalized course recommendation system that us
 
 **Technologies Used:**  
 - Frontend: HTML, CSS , JavaScript 
-- Backend: 
+- Backend: JS
 - Version Control: Git & GitHub  
 - Tools: VS Code 
 
